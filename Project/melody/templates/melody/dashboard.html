@@ -7,6 +7,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <!-- custom css -->
     <link rel="stylesheet" type="text/css" href="{% static 'melody/css/style.css' %}">
@@ -28,8 +29,8 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav margin">
                         <li class="nav-item active"><a class="nav-link" href="#">Dashboard</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li> -->
                     </ul>
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item dropdown">
@@ -49,7 +50,7 @@
         <!-- end of navbar -->
 
         <!-- start of page content -->
-        <div class="container container-space">
+        <div class="container-space" style="width: 1400px; margin-left: 4%;">
             <form id="form1" action="" method="POST" autocomplete="off" enctype="multipart/form-data">
                 {% csrf_token %} <p align="right"><button type="submit" class="buttonAdd">Add Song</button></p>
             </form>
@@ -58,9 +59,11 @@
                 <thead>
                     <tr>
                         <th scope="col">Song Title</th>
-                        <th scope="col">Genre</th>
+                        <th scope="col">Genre(s)</th>
                         <th scope="col">Artist(s)</th>
-                        <th scope="col">Date Registered</th> 
+                        <th scope="col">Date Registered</th>
+                        <th scope="col">Song Writer(s)</th> 
+                        <th scope="col">Producer(s)</th>   
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
@@ -70,45 +73,70 @@
                         <td>R & B</td>
                         <td>Kehlani</td>
                         <td>Oct 6, 2017</td>
-                        <td><a data-toggle="modal" href="#modalView" class="button">View</a>|<a data-toggle="modal" href="#modalDelete" class="button">Delete</a></td>
+                        <td>Therese Bolabola, Therese Bolabola, Therese Bolabola</td>
+                        <td>Therese Bolabola, Therese Bolabola, Therese Bolabola</td>
+                        <td><a data-toggle="modal" href="#modalView" class="button"><i class="material-icons" style="color: black; font-size: 26px;">&#xe88f;</i></a>
+                            <a data-toggle="modal" href="#modalDelete" class="button"><i class="material-icons" style="color: red; font-size:28px;">&#xe92b;</i></a>
+                        </td>
                     </tr>
                     <tr>
                         <th scope="row">Stuck with U</th>
                         <td>Hip Hop, Pop</td>
                         <td>Ariana Grande & Justin Bieber</td>
                         <td>May 8, 2020</td>
-                        <td><a data-toggle="modal" href="#modalView" class="button">View</a>|<a data-toggle="modal" href="#modalDelete" class="button">Delete</a></td>
+                        <td>Therese Bolabola, Therese Bolabola, Therese Bolabola</td>
+                        <td>Therese Bolabola, Therese Bolabola, Therese Bolabola</td>
+                        <td><a data-toggle="modal" href="#modalView" class="button"><i class="material-icons" style="color: black; font-size: 26px;">&#xe88f;</i></a>
+                            <a data-toggle="modal" href="#modalDelete" class="button"><i class="material-icons" style="color: red; font-size:28px;">&#xe92b;</i></a>
+                        </td>
                     </tr>
                     <tr>
                         <th scope="row">Good Girls</th>
                         <td>Electropop</td>
                         <td>Lany</td>
                         <td>Mar 3, 2017</td>
-                        <td><a data-toggle="modal" href="#modalView" class="button">View</a>|<a data-toggle="modal" href="#modalDelete" class="button">Delete</a></td>
+                        <td>Therese Bolabola, Therese Bolabola, Therese Bolabola</td>
+                        <td>Therese Bolabola, Therese Bolabola, Therese Bolabola</td>
+                        <td><a data-toggle="modal" href="#modalView" class="button"><i class="material-icons" style="color: black; font-size: 26px;">&#xe88f;</i></a>
+                            <a data-toggle="modal" href="#modalDelete" class="button"><i class="material-icons" style="color: red; font-size:28px;">&#xe92b;</i></a>
+                        </td>
                     </tr>
                     <tr>
                         <th scope="row">Super Far</th>
                         <td>Electropop</td>
                         <td>Lany</td>
                         <td>Jun 28, 2017</td>
-                        <td><a data-toggle="modal" href="#modalView" class="button">View</a>|<a data-toggle="modal" href="#modalDelete" class="button">Delete</a></td>
+                        <td>Therese Bolabola, Therese Bolabola, Therese Bolabola</td>
+                        <td>Therese Bolabola, Therese Bolabola, Therese Bolabola</td>
+                        <td><a data-toggle="modal" href="#modalView" class="button"><i class="material-icons" style="color: black; font-size: 26px;">&#xe88f;</i></a>
+                            <a data-toggle="modal" href="#modalDelete" class="button"><i class="material-icons" style="color: red; font-size:28px;">&#xe92b;</i></a>
+                        </td>
                     </tr>
                     <tr>
                         <th scope="row">Title</th>
                         <td>R & B</td>
                         <td>Kiana Lede</td>
                         <td>Sep 1, 2019</td>
-                        <td><a data-toggle="modal" href="#modalView" class="button">View</a>|<a data-toggle="modal" href="#modalDelete" class="button">Delete</a></td>
+                        <td>Therese Bolabola, Therese Bolabola, Therese Bolabola</td>
+                        <td>Therese Bolabola, Therese Bolabola, Therese Bolabola</td>
+                        <td><a data-toggle="modal" href="#modalView" class="button"><i class="material-icons" style="color: black; font-size: 26px;">&#xe88f;</i></a>
+                            <a data-toggle="modal" href="#modalDelete" class="button"><i class="material-icons" style="color: red; font-size:28px;">&#xe92b;</i></a>
+                        </td>
                     </tr>
                     <tr>
                         <th scope="row">EDM</th>
                         <td>EDM</td>
                         <td>Kehlani</td>
                         <td>Sep 2, 2020</td>
-                        <td><a data-toggle="modal" href="#modalView" class="button">View</a>|<a data-toggle="modal" href="#modalDelete" class="button">Delete</a></td>
+                        <td>Therese Bolabola, Therese Bolabola, Therese Bolabola</td>
+                        <td>Therese Bolabola, Therese Bolabola, Therese Bolabola</td>
+                        <td><a data-toggle="modal" href="#modalView" class="button"><i class="material-icons" style="color: black; font-size: 26px;">&#xe88f;</i></a>
+                            <a data-toggle="modal" href="#modalDelete" class="button"><i class="material-icons" style="color: red; font-size:28px;">&#xe92b;</i></a>
+                        </td>
                     </tr>
                 </tbody>
             </table>
+            
         </div>   
         <!--end of page content -->
 
