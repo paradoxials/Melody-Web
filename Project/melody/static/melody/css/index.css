@@ -60,13 +60,13 @@
     padding-bottom: 1%;
 }
 
-a{
+.a-design{
     text-decoration: none;
     color: white;
     font-size: 22px;
 }
 
-a:active, a:hover{
+.a-design:active, .a-design:hover{
     text-decoration: none;
     color: white;
 }
