@@ -8,11 +8,19 @@ from .models import *
 class MelodyIndexView(View):
 	def get(self, request):
 		return render(request, 'melody/index.html')
+
+class MelodyDashboardView(View):
+	def get(self, request):
+		return render(request, 'melody/dashboard.html')
 	def post(self, request):
 		if request.method == 'POST':
 			return render(request, 'melody/songRegister.html')
 
-class MelodyRegistrationView(View):
+class MelodyCustomerRegistrationView(View):
+	def get(self, request):
+		return render(request, 'melody/customerRegister.html')
+
+class MelodySongRegistrationView(View):
 	def get(self, request):
 		return render(request, 'melody/songRegister.html')
 	def post(self, request):
