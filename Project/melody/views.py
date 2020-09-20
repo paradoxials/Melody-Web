@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.generic import View, TemplateView
-from .forms import SongForm
+from .forms import *
 from .models import *
 
 # Create your views here.
@@ -19,6 +19,22 @@ class MelodyDashboardView(View):
 class MelodyCustomerRegistrationView(View):
 	def get(self, request):
 		return render(request, 'melody/customerRegister.html')
+	def post(self, request):
+		form = CustomerForm(request.POST)
+		if form.is_valid():
+			fname = request.POST.get("firstname")
+			lname = request.POST.get("lastname")
+			bday = request.POST.get("birthday")
+			add = request.POST.get("address")
+			email = request.POST.get("email")
+			password = request.POST.get("password")
+			contact = request.POST.get("contact")
+			form = Customer(firstname = fname, lastname = lname, birthday = bday, address = add, email = email, password = password, contact = contact)
+			form.save()
+			return HttpResponse("Customer added")
+		else:
+			print(form.errors)
+			return HttpResponse("Form is invalid")
 
 class MelodySongRegistrationView(View):
 	def get(self, request):
